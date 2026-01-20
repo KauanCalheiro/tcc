@@ -57,3 +57,9 @@ O projeto visa unir **gestão, transparência e interatividade**, oferecendo uma
 - Falar com o Juarez se pode ser feito
 
 **Justificativa**: Resolver uma dor da instituição. Solicitar banca fechada
+
+
+<!--
+- MAPA DE COLETA DE LIXO COM TIPO DE LIXO, DIAS E HORÁRIOS, INFOMAÇÕES E ALERTAS PARA OS USUÁRIOS...
+PODE SER FEITO APP E SITE.
+ -->
