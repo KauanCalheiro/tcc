@@ -25,11 +25,13 @@ A ferramenta atende a uma variedade de públicos:
 
 ## Criação de Testes
 
-<video controls src="create-test.mp4" title="Title"></video>
+<video controls src="https://github.com/KauanCalheiro/tcc/raw/refs/heads/main/Ferramentas%20Similares/BugBug/create-test.mp4" title="create-test.mp4"></video>
+![alt text](https://github.com/KauanCalheiro/tcc/raw/refs/heads/main/Ferramentas%20Similares/BugBug/create-test.mp4)
+
 
 ## Execução de Testes
 
-<video controls src="run-test.mp4" title="Title"></video>
+![alt text](https://github.com/KauanCalheiro/tcc/raw/refs/heads/main/Ferramentas%20Similares/BugBug/run-test.mp4)
 
 ## Preços
 
