@@ -4,13 +4,21 @@
 
 Uma plataforma desktop **open-source**, **local-first** e **colaborativa por design**, projetada para democratizar e acelerar a automação de testes via BDD. A ferramenta atua como um orquestrador inteligente na máquina do desenvolvedor, alavancando o Git como fonte única de verdade para permitir colaboração de equipe, versionamento e integração com workflows de CI/CD existentes.
 
-### 2. O Problema
+### 2. Os Problemas
 
-A criação e manutenção de testes automatizados é lenta, propensa a erros e muitas vezes desconectada dos requisitos de negócio. Ferramentas atuais ou são SaaS (exigindo upload de código sensível para a nuvem) ou exigem configuração de ambientes excessivamente complexa.
+A criação e manutenção de testes automatizados é lenta, propensa a erros e muitas vezes desconectada dos requisitos de negócio. Ferramentas atuais ou são SaaS (exigindo upload de código sensível para a nuvem) ou exigem configuração de ambientes excessivamente complexos e manuais.
 
 **O Desafio dos Sistemas Legados:** A modernização e garantia de qualidade em sistemas legados é um desafio crítico. Esses sistemas frequentemente carecem de testes automatizados, tornando-os frágeis e arriscados para modificar. Esta ferramenta oferece um ponto de entrada de baixa fricção para introduzir testes BDD robustos, reduzindo os riscos na manutenção e evolução.
 
-Falta uma solução que una a simplicidade da gravação visual com a robustez da engenharia de software (Page Objects, Clean Code), assistida por IA e focada em privacidade e funcionamento local.
+**Documentação Defasada:** A documentação de sistemas é frequentemente tratada como um artefato secundário, criada uma vez e rapidamente desatualizada. Equipes perdem tempo reconstruindo o entendimento de fluxos que já foram implementados, e novos membros não têm acesso a uma visão clara e confiável do comportamento esperado do sistema. A ausência de documentação sincronizada com o código real é um dos principais vetores de retrabalho e falhas de comunicação entre times técnicos e de negócio.
+
+**Barreira Técnica na Criação de Testes:** A criação de testes automatizados de forma manual exige um nível de especialização técnica elevado, conhecimento de frameworks, linguagens de programação, padrões como Page Object Model e domínio de ferramentas de seleção de elementos. Para equipes sem um especialista dedicado em automação, o processo é lento, propenso a erros e frequentemente abandonado em favor de testes manuais repetitivos, resultando em ciclos de entrega mais lentos e menor confiança no software entregue.
+
+**Custo e Exposição de Dados em Ferramentas SaaS:** As plataformas de automação baseadas em nuvem impõem um dilema crítico: ou o custo de licenciamento é proibitivo para equipes menores, ou o modelo de execução exige que a aplicação sob teste seja acessível externamente, expondo, de forma implícita ou explícita, sistemas internos, dados sensíveis e ambientes corporativos a terceiros. Para times que operam com orçamento reduzido ou que possuem restrições de segurança, compliance e isolamento de rede, essas soluções simplesmente não são uma opção viável.
+
+**Falta de Acesso Democrático a IA na Automação:** As ferramentas que integram IA para automação de testes são frequentemente proprietárias e fechadas, oferecendo apenas o modelo de IA escolhido pelo fornecedor, sem possibilidade de customização ou troca. Equipes que desejam usar seu próprio modelo (LLM local, API própria ou provedor específico) não têm opção viável. Isso cria dependência de terceiros, dificulta a privacidade corporativa e impede que organizações aproveitem investimentos já realizados em infraestrutura de IA ou que tenham requisitos regulatórios específicos de onde e como os modelos de IA são executados. Além disso, a falta de suporte para modelos locais força as empresas a enviarem código sensível e contexto de negócio para provedores externos, criando riscos de vazamento de propriedade intelectual e violação de políticas de compliance.
+
+**Falta de Integração com Pipelines de CI/CD:** As soluções de automação de testes, especialmente plataformas SaaS, frequentemente oferecem integrações limitadas ou complexas com ferramentas de CI/CD consolidadas (Jenkins, GitLab CI, GitHub Actions). Isso força equipes a criar scripts customizados, manuais e frágeis para orquestrar a execução de testes, resultando em workflows desconectados, dificuldade de manutenção e perda de visibilidade sobre o status dos testes no pipeline. Para times que já investiram em infraestrutura de automação, essa falta de integração nativa torna a adoção de novas soluções custosa e impraticável.
 
 ### 3. Público-Alvo
 
