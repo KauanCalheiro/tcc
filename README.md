@@ -1,8 +1,12 @@
-# Proposta de Projeto: Open-Source AI-Driven Test Automation Hub
+# Acutis: Hub Local-first de Testes Automatizados com Ênfase em Documentação
 
 ### 1. Visão do Produto
 
-Uma plataforma desktop **open-source**, **local-first** e **colaborativa por design**, projetada para democratizar e acelerar a automação de testes via BDD. A ferramenta atua como um orquestrador inteligente na máquina do desenvolvedor, alavancando o Git como fonte única de verdade para permitir colaboração de equipe, versionamento e integração com workflows de CI/CD existentes.
+Uma plataforma desktop **open-source**, **local-first** e **colaborativa por design**, projetada para democratizar e acelerar a automação de testes por meio de BDD, tendo a **documentação** como elemento central do processo.
+
+A ferramenta atua como um orquestrador inteligente na máquina local, alavancando o Git como fonte única de verdade para permitir versionamento, rastreabilidade, colaboração em equipe e integração com workflows de CI/CD já existentes.
+
+Mais do que apenas executar testes, a plataforma transforma especificações de comportamento em ativos versionados que funcionam simultaneamente como suíte de validação automatizada e como documentação técnica sincronizada com o código real. Dessa forma, reduz-se a fragmentação entre requisito, implementação e validação, promovendo maior transparência, previsibilidade e alinhamento entre áreas técnicas e de negócio.
 
 ### 2. Os Problemas
 
@@ -22,7 +26,7 @@ Esse cenário é particularmente crítico em sistemas legados, que frequentement
 
 Paralelamente, a documentação técnica é, em muitos contextos, tratada como artefato secundário: produzida pontualmente e rapidamente desatualizada. A falta de sincronização entre documentação e código gera descontinuidade informacional, exige reconstrução constante de conhecimento sobre fluxos existentes e dificulta o onboarding de novos membros. Esse desalinhamento constitui um fator relevante de retrabalho e falhas de comunicação entre áreas técnicas e de negócio.
 
-Nesse contexto, abordagens como Behavior-Driven Development (BDD) apresentam-se como alternativa estruturante, ao posicionar a especificação de comportamento — descrita em linguagem Gherkin — como elemento central do processo. Ao servir simultaneamente como documentação executável e como suíte de testes, o BDD contribui para reduzir a fragmentação entre especificação, implementação e validação.
+Nesse contexto, abordagens como Behavior-Driven Development (BDD) apresentam-se como alternativa estruturante, ao posicionar a especificação de comportamento, descrita em linguagem Gherkin, como elemento central do processo. Ao servir simultaneamente como documentação executável e como suíte de testes, o BDD contribui para reduzir a fragmentação entre especificação, implementação e validação.
 
 ---
 
