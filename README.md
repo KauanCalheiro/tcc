@@ -32,7 +32,7 @@ Grande parte das plataformas modernas de automação de testes adota o modelo So
 
 Esse modelo pode implicar exposição, direta ou indireta, de sistemas internos, dados sensíveis e ambientes corporativos à infraestrutura de terceiros. Para organizações sujeitas a restrições orçamentárias, políticas rigorosas de segurança da informação, requisitos de compliance ou isolamento de rede, tal abordagem torna-se inviável ou incompatível com suas diretrizes institucionais.
 
-A problemática se intensifica com a incorporação de inteligência artificial às ferramentas de automação. Muitas soluções baseadas em IA são proprietárias e fechadas, impondo o uso exclusivo do modelo de linguagem escolhido pelo fornecedor, sem possibilidade de substituição ou customização. Esse cenário limita a autonomia tecnológica das equipes e cria dependência estrutural de fornecedor (*vendor lock-in*).
+A problemática se intensifica com a incorporação de inteligência artificial às ferramentas de automação. Muitas soluções baseadas em IA são proprietárias e fechadas, impondo o uso exclusivo do modelo de linguagem escolhido pelo fornecedor, sem possibilidade de substituição ou customização. Esse cenário limita a autonomia tecnológica das equipes e cria dependência estrutural de fornecedor (_vendor lock-in_).
 
 Organizações que já realizaram investimentos em infraestrutura própria de IA, que necessitam utilizar modelos locais ou que estão sujeitas a requisitos regulatórios específicos quanto ao tratamento de dados não encontram alternativas compatíveis no ecossistema predominante. A obrigatoriedade de envio de código sensível e contexto de negócio a provedores externos eleva riscos relacionados à propriedade intelectual, confidencialidade e conformidade normativa.
 
