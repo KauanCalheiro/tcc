@@ -6,33 +6,49 @@ Uma plataforma desktop **open-source**, **local-first** e **colaborativa por des
 
 ### 2. Os Problemas
 
-A criação e manutenção de testes automatizados representa um desafio persistente no desenvolvimento de software moderno. O processo é frequentemente lento, propenso a erros e desconectado dos requisitos de negócio. As soluções disponíveis no mercado, em sua maioria, impõem um trade-off entre acessibilidade técnica e privacidade de dados, ou entre custo e capacidade de integração. Esta seção detalha os principais problemas identificados, agrupados em três macroproblemas interdependentes.
+A criação e manutenção de testes automatizados permanece como um desafio estrutural no desenvolvimento de software contemporâneo. O processo é frequentemente lento, suscetível a falhas e desalinhado dos requisitos de negócio. As soluções disponíveis no mercado, em sua maioria, impõem um trade-off entre acessibilidade técnica e privacidade de dados, ou entre custo e capacidade de integração ao ecossistema já existente.
+
+Os problemas identificados não são isolados: eles se inter-relacionam e se retroalimentam, contribuindo para um ciclo de baixa maturidade em qualidade de software, aumento de risco operacional e elevação do custo de manutenção. A seguir, apresentam-se três macroproblemas interdependentes que estruturam essa análise.
 
 ---
 
 #### 2.1 Barreiras Técnicas e Déficit de Documentação
 
-A automação de testes exige domínio de frameworks, linguagens de programação, padrões arquiteturais como Page Object Model e ferramentas de seleção de elementos. Para equipes sem um especialista dedicado em automação, esse conjunto de pré-requisitos eleva o custo de entrada, tornando o processo lento e propenso a erros. Como consequência prática, testes manuais repetitivos substituem a automação, resultando em ciclos de entrega mais longos e menor confiança no software entregue.
+A automação de testes demanda conhecimento especializado em frameworks, linguagens de programação, padrões arquiteturais (como Page Object Model) e técnicas de identificação e manipulação de elementos de interface. Para equipes que não dispõem de profissionais dedicados à automação, esse conjunto de pré-requisitos eleva significativamente o custo de entrada e dificulta a adoção sistemática de testes automatizados.
 
-Esse problema é particularmente crítico em sistemas legados, que frequentemente carecem de qualquer cobertura de testes automatizados. A ausência de testes torna esses sistemas frágeis e de alto risco para modificação, dificultando processos de modernização e aumentando o custo de manutenção evolutiva.
+Como consequência, testes manuais repetitivos tendem a substituir a automação, resultando em ciclos de entrega mais longos, maior incidência de regressões e menor previsibilidade na evolução do sistema. O impacto organizacional manifesta-se na redução da confiança no software entregue e no aumento do retrabalho.
 
-Agravando esse cenário, a documentação técnica é tratada, na prática, como um artefato secundário: criada uma vez e rapidamente desatualizada. Equipes perdem tempo reconstruindo o entendimento de fluxos já implementados, e novos membros não dispõem de uma visão confiável do comportamento esperado do sistema. A ausência de documentação sincronizada com o código real é um vetor relevante de retrabalho e falhas de comunicação entre times técnicos e de negócio. A adoção de BDD (Behavior-Driven Development) endereça diretamente essa lacuna ao colocar a especificação de comportamento — em linguagem Gherkin — no centro do processo de desenvolvimento, servindo simultaneamente como documentação viva e como script de teste executável.
+Esse cenário é particularmente crítico em sistemas legados, que frequentemente carecem de cobertura automatizada. A ausência de testes torna tais sistemas frágeis e de alto risco para modificação, dificultando iniciativas de modernização e ampliando o custo da manutenção evolutiva. Cada alteração passa a representar uma incerteza quanto à integridade do comportamento previamente implementado.
+
+Paralelamente, a documentação técnica é, em muitos contextos, tratada como artefato secundário: produzida pontualmente e rapidamente desatualizada. A falta de sincronização entre documentação e código gera descontinuidade informacional, exige reconstrução constante de conhecimento sobre fluxos existentes e dificulta o onboarding de novos membros. Esse desalinhamento constitui um fator relevante de retrabalho e falhas de comunicação entre áreas técnicas e de negócio.
+
+Nesse contexto, abordagens como Behavior-Driven Development (BDD) apresentam-se como alternativa estruturante, ao posicionar a especificação de comportamento — descrita em linguagem Gherkin — como elemento central do processo. Ao servir simultaneamente como documentação executável e como suíte de testes, o BDD contribui para reduzir a fragmentação entre especificação, implementação e validação.
 
 ---
 
 #### 2.2 Custo, Privacidade e Dependência de Plataformas SaaS
 
-As plataformas de automação baseadas em nuvem impõem um dilema crítico: ou o custo de licenciamento é inviável para equipes menores, ou o modelo de execução exige que a aplicação sob teste seja acessível externamente. Isso expõe, de forma implícita ou explícita, sistemas internos, dados sensíveis e ambientes corporativos a infraestrutura de terceiros. Para times com restrições orçamentárias ou sujeitos a políticas de segurança, compliance e isolamento de rede, essas soluções simplesmente não representam uma opção viável.
+Grande parte das plataformas modernas de automação de testes adota o modelo Software as a Service (SaaS). Embora ofereçam facilidade inicial de uso, essas soluções impõem um dilema relevante: custos recorrentes potencialmente elevados ou a necessidade de tornar a aplicação sob teste acessível externamente.
 
-A dimensão da privacidade se estende também ao uso de inteligência artificial. As ferramentas que integram IA para automação de testes são, em sua maioria, proprietárias e fechadas, impondo o modelo de linguagem escolhido pelo fornecedor sem possibilidade de substituição ou customização. Equipes que necessitam utilizar modelos próprios — seja por restrições regulatórias, por investimentos já realizados em infraestrutura de IA ou por políticas de conformidade — não dispõem de alternativas viáveis no ecossistema atual. Esse cenário cria dependência de fornecedor (_vendor lock-in_) e força o envio de código sensível e contexto de negócio a provedores externos, elevando os riscos de vazamento de propriedade intelectual e violação de políticas de compliance.
+Esse modelo pode implicar exposição, direta ou indireta, de sistemas internos, dados sensíveis e ambientes corporativos à infraestrutura de terceiros. Para organizações sujeitas a restrições orçamentárias, políticas rigorosas de segurança da informação, requisitos de compliance ou isolamento de rede, tal abordagem torna-se inviável ou incompatível com suas diretrizes institucionais.
+
+A problemática se intensifica com a incorporação de inteligência artificial às ferramentas de automação. Muitas soluções baseadas em IA são proprietárias e fechadas, impondo o uso exclusivo do modelo de linguagem escolhido pelo fornecedor, sem possibilidade de substituição ou customização. Esse cenário limita a autonomia tecnológica das equipes e cria dependência estrutural de fornecedor (*vendor lock-in*).
+
+Organizações que já realizaram investimentos em infraestrutura própria de IA, que necessitam utilizar modelos locais ou que estão sujeitas a requisitos regulatórios específicos quanto ao tratamento de dados não encontram alternativas compatíveis no ecossistema predominante. A obrigatoriedade de envio de código sensível e contexto de negócio a provedores externos eleva riscos relacionados à propriedade intelectual, confidencialidade e conformidade normativa.
 
 ---
 
 #### 2.3 Integração Deficiente com Pipelines de CI/CD
 
-A integração entre ferramentas de automação de testes e pipelines de entrega contínua (CI/CD) permanece um ponto crítico de fricção. Soluções SaaS frequentemente oferecem integrações limitadas ou excessivamente complexas com ferramentas consolidadas como Jenkins, GitLab CI e GitHub Actions. Como resultado, equipes são forçadas a desenvolver scripts customizados, manuais e de difícil manutenção para orquestrar a execução de testes, gerando workflows desconectados e perda de visibilidade sobre o status das suítes no pipeline.
+A integração entre ferramentas de automação de testes e pipelines de integração e entrega contínua (CI/CD) constitui outro ponto crítico. Soluções baseadas em nuvem frequentemente oferecem integrações limitadas ou excessivamente complexas com ferramentas consolidadas, como Jenkins, GitLab CI e GitHub Actions.
 
-Para times que já investiram em infraestrutura de CI/CD, esse gap de integração eleva o custo de adoção de novas soluções e reduz o retorno sobre o investimento já realizado. A ausência de integração nativa incentiva soluções improvisadas que comprometem a rastreabilidade, a confiabilidade e a escalabilidade do processo de qualidade como um todo.
+Na prática, equipes acabam desenvolvendo scripts customizados e mecanismos de orquestração paralelos para viabilizar a execução de testes no pipeline. Essa fragmentação gera aumento da complexidade operacional, dificuldade de manutenção e redução da rastreabilidade das execuções.
+
+Para organizações que já investiram na consolidação de sua infraestrutura de DevOps, a ausência de integração nativa representa um desalinhamento arquitetural que eleva o custo de adoção de novas ferramentas e compromete o retorno sobre investimentos previamente realizados. Além disso, soluções improvisadas tendem a comprometer a confiabilidade, a escalabilidade e a visibilidade do processo de garantia de qualidade.
+
+---
+
+Em conjunto, esses três macroproblemas evidenciam uma lacuna estrutural no ecossistema atual de automação de testes: a ausência de uma solução que concilie baixa barreira técnica, documentação sincronizada, execução local com preservação de privacidade, flexibilidade no uso de modelos de IA e integração nativa ao fluxo de entrega contínua. Essa lacuna fundamenta a motivação para a proposta apresentada neste trabalho.
 
 ### 3. Público-Alvo
 
