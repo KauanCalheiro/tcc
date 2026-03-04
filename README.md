@@ -54,12 +54,58 @@ Para organizações que já investiram na consolidação de sua infraestrutura d
 
 Em conjunto, esses três macroproblemas evidenciam uma lacuna estrutural no ecossistema atual de automação de testes: a ausência de uma solução que concilie baixa barreira técnica, documentação sincronizada, execução local com preservação de privacidade, flexibilidade no uso de modelos de IA e integração nativa ao fluxo de entrega contínua. Essa lacuna fundamenta a motivação para a proposta apresentada neste trabalho.
 
+---
+
 ### 3. Público-Alvo
 
-Nosso público-alvo são profissionais técnicos que precisam automatizar testes, mas que podem não ser programadores especialistas. A ferramenta é desenhada para ser acessível o suficiente para que um QA manual possa começar a automatizar, e ao mesmo tempo poderosa o bastante para que um desenvolvedor experiente seja produtivo.
+A plataforma é direcionada a profissionais e equipes envolvidas no desenvolvimento, validação e gestão de software, especialmente em contextos que exigem automação de testes com documentação sincronizada, execução local e integração a pipelines de entrega contínua.
 
-- **Engenheiros de QA (Automação e Manuais):** Que precisam transitar de testes manuais para automação robusta sem uma barreira técnica inicial alta.
-- **Desenvolvedores de Software:** Que buscam integrar testes de aceitação no seu fluxo de desenvolvimento (TDD/BDD) de forma rápida.
+- **Quality Assurance (QA):**
+  Profissionais responsáveis por validar o comportamento do sistema e estruturar estratégias de testes, manuais ou automatizados.
+
+- **Desenvolvedores de Software:**
+  Engenheiros que implementam funcionalidades e necessitam validar requisitos de forma contínua e integrada ao fluxo de desenvolvimento.
+
+- **Gestores Técnicos (Tech Leads, Engineering Managers):**
+  Responsáveis por qualidade, previsibilidade de entregas e definição de padrões técnicos dentro da equipe.
+
+- **Analistas de Negócio / Produto:**
+  Profissionais que especificam comportamentos esperados do sistema e necessitam rastreabilidade entre requisito e validação.
+
+- **Equipes de DevOps / Infraestrutura:**
+  Times responsáveis por pipelines de CI/CD, ambientes de execução e políticas de segurança.
+
+
+---
+
+
+### 4. Casos de Uso
+
+A seguir, apresentam-se cenários específicos nos quais a plataforma agrega valor estratégico e operacional:
+
+- **Adequação a Políticas de Privacidade e Proteção de Dados:**
+  Execução integral dos testes em ambiente local ou em infraestrutura própria, evitando exposição de código-fonte, dados sensíveis ou ambientes internos a provedores externos.
+
+- **Conformidade com Requisitos Regulatórios (Compliance):**
+  Utilização da ferramenta em organizações sujeitas a normas internas ou externas que restringem o uso de SaaS, exigem rastreabilidade de alterações e controle sobre onde os dados são processados.
+
+- **Ambientes com Isolamento de Rede (Air-gapped ou Rede Interna):**
+  Execução da automação em ambientes sem acesso à internet ou com restrições severas de comunicação externa.
+
+- **Auditoria e Rastreabilidade Técnica:**
+  Versionamento de especificações BDD e artefatos de teste via Git, permitindo histórico claro de alterações, autoria e evolução comportamental do sistema.
+
+- **Modernização Segura de Sistemas Legados:**
+  Introdução incremental de testes de aceitação como camada de proteção antes de refatorações ou evoluções estruturais.
+
+- **Documentação Sincronizada ao Comportamento Real:**
+  Geração e manutenção de documentação viva derivada diretamente da execução dos testes, reduzindo inconsistências entre requisito, código e validação.
+
+- **Integração Estruturada ao Pipeline de CI/CD:**
+  Execução automatizada das suítes de teste como etapa obrigatória do fluxo de integração e entrega contínua.
+
+- **Uso de Modelos de IA Locais ou Corporativos:**
+  Integração com LLMs internos ou privados, garantindo autonomia tecnológica, controle sobre dados e redução de dependência de fornecedores externos.
 
 ---
 
